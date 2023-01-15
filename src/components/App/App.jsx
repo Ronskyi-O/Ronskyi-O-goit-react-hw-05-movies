@@ -1,12 +1,14 @@
-// import { Routes, Route } from "react-router-dom";
-
-import { Container } from "./App.styled";
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "components/Layout/Layout";
 
 export const App = () => {
 
   return (
-    <Container>
-      React homework template
-    </Container>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/movies" element={<Layout />} />
+      </Routes>
+    </div>
   );
 };
