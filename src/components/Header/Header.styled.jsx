@@ -14,11 +14,11 @@ export const NavList = styled.ul`
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 40px;
 `
 
 export const NavItem = styled.li`
-    font-size: 25px
+    font-size: 25px;
 `
 
 export const NavStyledLink = styled(NavLink)`
