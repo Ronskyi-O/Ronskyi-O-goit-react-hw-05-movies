@@ -15,7 +15,7 @@ export const MovieDetails = () => {
         return null
     }
 
-    const { backdrop_path, overview, original_title, release_date, vote_average, genres, poster_path } = movieDetails
+    const { poster_path, overview, original_title, release_date, vote_average, genres } = movieDetails
 
     const yearOfRelease = release_date.slice(0, 4);
     const userScore = Math.round(vote_average * 10);
@@ -25,7 +25,7 @@ export const MovieDetails = () => {
 
     return (
         < div >
-            {<img src={`/${poster_path}`} alt="" />}
+            {<img src={poster_path} alt="" />}
             <div>
                 <h2>{original_title}({yearOfRelease})</h2>
                 <p>User Score: {userScore}%</p>
