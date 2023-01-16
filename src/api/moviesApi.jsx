@@ -5,3 +5,9 @@ export const getTrendingMovies = () => {
         .then((res) => res.json())
         .then((res) => res.results);
 }
+
+
+export const getMovieById = (movieId) => {
+    return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`)
+        .then((res) => res.json())
+}

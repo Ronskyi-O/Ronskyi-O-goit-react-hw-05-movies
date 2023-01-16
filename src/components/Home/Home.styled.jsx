@@ -29,4 +29,9 @@ export const NavItem = styled(Link)`
     color: black;
     height: 100%;
     cursor: pointer;
+
+    :hover,
+    :focus {
+        color:  #725757;
+    }
 `
