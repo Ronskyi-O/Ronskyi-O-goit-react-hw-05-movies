@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const Navigation = styled.nav`
     display: flex;
@@ -9,9 +10,30 @@ export const Navigation = styled.nav`
 `
 
 export const NavList = styled.ul`
-    padding: 0;
+    padding: 20px;
     margin: 0;
     list-style: none;
     display: flex;
     gap: 30px;
+`
+
+export const NavItem = styled.li`
+    font-size: 25px
+`
+
+export const NavStyledLink = styled(NavLink)`
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    cursor: pointer;
+    padding: 15px;
+
+    &.active {
+        color: black;
+    }
+
+    :hover:not(.active),
+    :focus:not(.active) {
+        color: black;
+    }
 `
