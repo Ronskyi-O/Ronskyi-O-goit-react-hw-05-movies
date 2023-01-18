@@ -12,7 +12,6 @@ export const Home = () => {
         getTrendingMovies().then(setTrendingMovies)
     }, [])
 
-    // console.log(trendingMovies);
     return (
         <Container>
             <Title>Tranding this week</Title>
