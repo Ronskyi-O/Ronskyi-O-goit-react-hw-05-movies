@@ -16,5 +16,10 @@ export const getMovieCastById = (movieId) => {
     return fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`)
         .then((res) => res.json())
         .then((res) => res.cast);
+}
 
+export const getMovieReviewsById = (movieId) => {
+    return fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${API_KEY}&page=1`)
+        .then((res) => res.json())
+        .then((res) => res.results);
 }
