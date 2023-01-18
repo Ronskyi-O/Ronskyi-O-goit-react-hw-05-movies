@@ -29,7 +29,7 @@ export const AdditionalInfoContainer = styled.div`
 `
 
 export const AdditionalInfoList = styled.ul`
-        list-style: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -38,7 +38,7 @@ export const AdditionalInfoList = styled.ul`
 `
 
 export const AdditionalInfoItem = styled(Link)`
-        text-decoration: none;
+    text-decoration: none;
     color: black;
     height: 100%;
     cursor: pointer;

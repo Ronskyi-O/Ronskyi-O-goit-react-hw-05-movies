@@ -11,3 +11,10 @@ export const getMovieById = (movieId) => {
     return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`)
         .then((res) => res.json())
 }
+
+export const getMovieCastById = (movieId) => {
+    return fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`)
+        .then((res) => res.json())
+        .then((res) => res.cast);
+
+}
