@@ -6,7 +6,7 @@ import { getMoviesByName } from "../../api/moviesApi"
 import { Container, MoviesList, Movie, NavItem } from "./MoviesSearchPage.styled"
 
 
-export const MoviesSearchPage = () => {
+const MoviesSearchPage = () => {
     const [movies, setMovies] = useState([])
     const [searchParams] = useSearchParams()
     const query = searchParams.get("query") ?? ""
@@ -35,3 +35,5 @@ export const MoviesSearchPage = () => {
         </div>
     )
 }
+
+export default MoviesSearchPage

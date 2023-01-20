@@ -4,7 +4,7 @@ import { getMovieById } from "../../../api/moviesApi"
 
 import { MovieContainer, ButtonGoBack, ImageContainer, DetailsContainer, AdditionalInfoContainer, AdditionalInfoList, AdditionalInfoItem } from "./MovieDetails.styled"
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const { movieId } = useParams()
     const [movieDetails, setMovieDetails] = useState()
     const location = useLocation()
@@ -55,3 +55,5 @@ export const MovieDetails = () => {
         </div>
     )
 }
+
+export default MovieDetails
