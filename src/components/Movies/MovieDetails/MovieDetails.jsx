@@ -43,10 +43,10 @@ export const MovieDetails = () => {
                 <h3>Additional Information</h3>
                 <AdditionalInfoList>
                     <li>
-                        <AdditionalInfoItem to={"cast"} state={{ from: location.state.from }}>Cast</AdditionalInfoItem>
+                        <AdditionalInfoItem to={"cast"} state={{ from: backLinkHref }}>Cast</AdditionalInfoItem>
                     </li>
                     <li>
-                        <AdditionalInfoItem to={"reviews"} state={{ from: location.state.from }}>Reviews</AdditionalInfoItem>
+                        <AdditionalInfoItem to={"reviews"} state={{ from: backLinkHref }}>Reviews</AdditionalInfoItem>
                     </li>
                 </AdditionalInfoList>
             </AdditionalInfoContainer>
