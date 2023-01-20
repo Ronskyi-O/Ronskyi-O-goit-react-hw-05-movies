@@ -17,7 +17,7 @@ export const MovieReviews = () => {
 
     return (
         <ul>
-            {!movieInfoReviews ? movieInfoReviews.map(({ id, author, content }) => (
+            {movieInfoReviews ? movieInfoReviews.map(({ id, author, content }) => (
                 <li key={id}>
                     <h4>Author: {author}</h4>
                     <p>{content}</p>

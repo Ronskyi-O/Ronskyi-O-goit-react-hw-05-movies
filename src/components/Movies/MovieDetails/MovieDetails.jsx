@@ -43,10 +43,10 @@ export const MovieDetails = () => {
                 <h3>Additional Information</h3>
                 <AdditionalInfoList>
                     <li>
-                        <AdditionalInfoItem to={"cast"}>Cast</AdditionalInfoItem>
+                        <AdditionalInfoItem to={"cast"} state={{ from: location.state.from }}>Cast</AdditionalInfoItem>
                     </li>
                     <li>
-                        <AdditionalInfoItem to={"reviews"}>Reviews</AdditionalInfoItem>
+                        <AdditionalInfoItem to={"reviews"} state={{ from: location.state.from }}>Reviews</AdditionalInfoItem>
                     </li>
                 </AdditionalInfoList>
             </AdditionalInfoContainer>
