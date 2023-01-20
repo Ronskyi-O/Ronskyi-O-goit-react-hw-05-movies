@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate, Outlet } from "react-router-dom"
+import { useParams, Outlet, Link, useLocation } from "react-router-dom"
 import { getMovieById } from "../../../api/moviesApi"
 
 import { MovieContainer, ButtonGoBack, ImageContainer, DetailsContainer, AdditionalInfoContainer, AdditionalInfoList, AdditionalInfoItem } from "./MovieDetails.styled"
@@ -7,7 +7,7 @@ import { MovieContainer, ButtonGoBack, ImageContainer, DetailsContainer, Additio
 export const MovieDetails = () => {
     const { movieId } = useParams()
     const [movieDetails, setMovieDetails] = useState()
-    const navigate = useNavigate()
+    const location = useLocation()
 
     useEffect(() => {
         getMovieById(movieId).then(setMovieDetails)
@@ -21,12 +21,12 @@ export const MovieDetails = () => {
     const yearOfRelease = release_date.slice(0, 4);
     const userScore = Math.round(vote_average * 10);
     const listOfGenres = genres.map((genre) => genre.name).join(", ");
-
+    const backLinkHref = location.state?.from ?? "/"
     return (
         <div>
             < MovieContainer >
                 <ImageContainer>
-                    <ButtonGoBack onClick={() => navigate(-1)} >Go Back</ButtonGoBack>
+                    <Link to={backLinkHref} ><ButtonGoBack>Go Back</ButtonGoBack></Link>
                     {<img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`Poster to ${original_title}`} width={250} />}
                 </ImageContainer>
                 <DetailsContainer>

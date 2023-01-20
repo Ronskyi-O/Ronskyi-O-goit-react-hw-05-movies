@@ -1,6 +1,6 @@
 import { MoviesSearch } from "components/Movies/MoviesSearc/MoviesSearc"
 import { useState, useEffect } from "react"
-import { useSearchParams } from "react-router-dom"
+import { useLocation, useSearchParams } from "react-router-dom"
 import { getMoviesByName } from "../../api/moviesApi"
 
 import { Container, MoviesList, Movie, NavItem } from "./MoviesSearchPage.styled"
@@ -10,6 +10,7 @@ export const MoviesSearchPage = () => {
     const [movies, setMovies] = useState([])
     const [searchParams] = useSearchParams()
     const query = searchParams.get("query") ?? ""
+    const location = useLocation()
 
     useEffect(() => {
         if (query !== "") {
@@ -26,7 +27,7 @@ export const MoviesSearchPage = () => {
                 <MoviesList>
                     {movies.map(({ id, title }) => (
                         <Movie key={id}>
-                            <NavItem to={`/movies/${id}`}>{title}</NavItem>
+                            <NavItem to={`/movies/${id}`} state={{ from: location }}>{title}</NavItem>
                         </Movie>
                     ))}
                 </MoviesList>

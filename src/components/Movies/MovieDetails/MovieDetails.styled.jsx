@@ -18,6 +18,7 @@ export const ImageContainer = styled.div`
 export const ButtonGoBack = styled.button`
     width: 100px;
     height: 30px;
+    cursor: pointer;
 `
 
 export const DetailsContainer = styled.div`
